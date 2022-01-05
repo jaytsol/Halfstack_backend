@@ -1,10 +1,16 @@
 const express = require("express");
-require("dotenv").config();
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const compression = require("compression");
+const dotenv = require("dotenv").config();
 
-const app = express();
+let app = express();
+let PORT = process.env.PORT;
 
-const PORT = process.env.PORT;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(compression());
 
-await Promise.resolve(installSwaggerOpenAPI(app));
-
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log("On sail");
+});
