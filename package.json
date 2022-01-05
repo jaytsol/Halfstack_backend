@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/jaytsol/Halfstack_backend/issues"
   },
-  "homepage": "https://github.com/jaytsol/Halfstack_backend#readme"
+  "homepage": "https://github.com/jaytsol/Halfstack_backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "compression": "^1.7.4",
+    "express": "^4.17.2",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.5"
+  }
 }
